@@ -1,271 +1,315 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQ7CJ77CXM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-DQ7CJ77CXM');
-  </script>
-
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>株式会社ZOSTEC リファラル採用</title>
-  <link rel="icon" href="favicon.ico" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Zen+Maru+Gothic:wght@400;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="reset.css" />
+  <title>【営業職】勝てる環境は用意した。あとは君の覚悟だけ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --orange:#00bcd4;
+      --orange-deep:#008ba3;
+      --navy:#0f1930;
+      --ink:#111111;
+      --gray:#6b7280;
+      --light:#ffffff;
+      --bg:#fafafa;
+      --muted:#f6f6f6;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Noto Sans JP','Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:fixed;top:0;left:0;width:100%;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid #eee}
+    .header-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:36px}
+    nav ul{display:flex;gap:28px;align-items:center;list-style:none}
+    .btn-nav{padding:10px 18px;border-radius:999px;border:none;background:linear-gradient(135deg,var(--navy) 0%,var(--navy) 50%,#FF6B35 50%,#FF6B35 100%);color:#fff;font-weight:700}
+    .btn-nav:hover{opacity:0.9}
+    .hero{padding-top:68px;padding-bottom:0;position:relative;background:#fff}
+    .hero-image-wrapper{width:100%;max-width:100%;margin:0 auto}
+    .hero-image-wrapper img{width:100%;height:auto}
+    .hero-image-mobile{display:none!important}
+    .hero-image-web{display:block!important}
+    section{padding:90px 0}
+    .sec-head{text-align:center;margin-bottom:46px}
+    .sec-title{font-size:32px;font-weight:900}
+    .sec-sub{color:#4b5563;margin-top:8px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .card h3{font-size:18px;margin-bottom:10px}
+    .card p{color:#374151}
+    .value{background:#0f1930;color:#fff;position:relative;overflow:hidden}
+    .value .sec-title{color:#fff}
+    .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .value .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .value .card h3{color:#fff}
+    .value .card p{color:#f3f4f6}
+    .env{background:#fff}
+    .env-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+    .photo{border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+    .voices{background:linear-gradient(180deg,#fff,#fff7f0)}
+    .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .voice{background:#fff;border:1px solid #eee;border-radius:16px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;height:100%}
+    .avatar{width:120px;height:120px;border-radius:50%;overflow:hidden;border:4px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.12);margin-bottom:6px}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .voice .name{font-weight:800}
+    .voice .pos{color:#6b7280;font-size:12px;margin-bottom:10px}
+    .voice p{color:#374151}
+    .job{background:#fff}
+    .job-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .list{background:#fff;border:1px solid #eee;border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+    .list h4{font-size:16px;margin:8px 0 6px}
+    .list .row{display:flex;border-top:1px dashed #eee;padding:12px 0;gap:14px}
+    .list .row:first-of-type{border-top:none;padding-top:4px}
+    .key{width:110px;flex-shrink:0;color:#6b7280;font-weight:700}
+    .val{flex:1}
+    .faq{background:#fff}
+    details{background:#fff;border:1px solid #eee;border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow)}
+    summary{cursor:pointer;font-weight:800}
+    .cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy) 50%,#FF6B35 50%,#FF6B35 100%);color:#fff;text-align:center}
+    .cta a{display:inline-block;margin-top:10px}
+    .cta .btn-big{background:#111;color:#fff;padding:20px 36px;border-radius:999px;font-weight:900}
+    footer{background:#fff;color:#111;text-align:center;padding:40px 0;border-top:1px solid #eee}
+    footer img{height:44px;margin:0 auto 10px}
+    @media(max-width:1024px){
+      .grid-3{grid-template-columns:1fr 1fr}
+      .value-grid{grid-template-columns:1fr 1fr}
+      .env-grid{grid-template-columns:1fr}
+      .voice-grid{grid-template-columns:1fr 1fr}
+      .job-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      .hero-image-web{display:none!important}
+      .hero-image-mobile{display:block!important}
+      nav ul{gap:12px;flex-wrap:wrap}
+      nav ul li:not(:last-child){display:none}
+      .btn-nav{padding:8px 14px;font-size:14px}
+      .header-inner{height:auto;min-height:68px;padding:12px 0}
+      .brand img{height:32px}
+    }
+    @media(max-width:640px){
+      .grid-3,.value-grid,.voice-grid{grid-template-columns:1fr}
+      .title{font-size:32px}
+      .sec-title{font-size:20px;line-height:1.3}
+      nav ul{gap:8px}
+      .btn-nav{padding:6px 12px;font-size:13px}
+      .header-inner{padding:10px 0}
+      .brand img{height:28px}
+    }
+  </style>
 </head>
-
-
-
 <body>
-  <main id="main">
-    <section id="top">
-      <div class="top-img">
-        <div class="top-img-back">
-          <img src="catch_copy.svg" alt="ZOSTEC Team" />
-
-        </div>
-        <div class="top-logo-img">
-          <a href="https://www.zostec.jp/" target="_blank" rel="noopener noreferrer">
-            <img src="corporate_logo.png" alt="ZOSTEC ロゴ" class="logo-img">
-          </a>
-        </div>
-
-
-        <div class="top-catch-copy">
-          <img src="./hero_catchcopy.png" alt="未経験から、プロのエンジニアへ。">
-        </div>
-      </div>
-
-      <div class="top-sub-title">
-        <h2 class="top-sub-title-main">
-          あなたの「なりたい」を<br>
-          ZOSTECが全力で叶えます。
-        </h2>
-      </div>
-
-      <div class="message-main">
-        <div class="message-sandwich">
-
-          <div class="sandwich-img left-pos">
-            <img src="team_mini1.svg" alt="仲間の写真1">
-          </div>
-
-          <div class="sandwich-text">
-            <h3 class="message-heading">
-              会社だけど、<br>
-              ただの同僚じゃない。<br>
-              「仲間」です。
-            </h3>
-          </div>
-
-          <div class="sandwich-img right-pos">
-            <img src="team_mini2.svg" alt="仲間の写真2">
-          </div>
-        </div>
-
-        <p class="message-sub-text">
-          個人の成長、自由なキャリアパス、エンジニアファースト。<br>
-          ZOSTECは、あなたの未来を第一に考えるエンジニアのための会社です。
-        </p>
-      </div>
-    </section>
-
-    <section id="recommend">
-      <div class="section-header">
-        <p class="section-sub">WHY ZOSTEC?</p>
-        <h3 class="section-title-text">未経験でも安心な<br>3つの理由</h3>
-      </div>
-
-      <div class="point-container">
-        <div class="point-item">
-          <div class="point-img">
-            <img src="point01.svg" onerror="this.src='https://placehold.jp/300x200.png?text=Point01'">
-          </div>
-          <div class="point-text">
-            <h4>
-              <img src="num_01.svg" class="num-icon" alt="01">
-              「1」からではなく「0」から
-            </h4>
-            <p>PCの操作や名刺交換から研修。9割以上が未経験スタートだから、あなたの不安も分かります。</p>
-          </div>
-        </div>
-
-        <div class="point-item">
-          <div class="point-img">
-            <img src="point02.svg" onerror="this.src='https://placehold.jp/300x200.png?text=Point02'">
-          </div>
-          <div class="point-text">
-            <h4>
-              <img src="num_02.svg" class="num-icon" alt="02">
-              「お節介」なほどのサポート
-            </h4>
-            <p>「教科書読んでおいて」という放置はしません。<br>入社後も手厚いフォローで、悩みもキャリアも一緒に考えます。</p>
-          </div>
-        </div>
-
-        <div class="point-item">
-          <div class="point-img">
-            <img src="point03.svg" onerror="this.src='https://placehold.jp/300x200.png?text=Point03'">
-          </div>
-          <div class="point-text">
-            <h4>
-              <img src="num_03.svg" class="num-icon" alt="03">
-              遊びも全力なチームワーク
-            </h4>
-            <p>毎月行うレクリエーションを始め、eスポーツ、ダーツ、サバゲーなど、趣味の合う仲間と楽しい時間を共有できます！</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="schedule">
-      <div class="ceo-img-wrapper">
-        <img src="engineer_schedule.svg" alt="エンジニアの1日スケジュール" class="img-shadow">
-      </div>
-    </section>
-    <section class="recruit">
-      <div class="recruit-title">
-        <div class="section-title-wrapper">
-          <h3 class="section-title-text-simple">募集要項</h3>
-        </div>
-      </div>
-
-      <div class="recruit-items">
-        <div class="recruit-item">
-          <h4>会社名</h4>
-          <ul>
-            <li>株式会社ZOSTEC</li>
-          </ul>
-        </div>
-
-        <div class="recruit-item">
-          <h4>本社</h4>
-          <ul>
-            <li>〒150-0031 東京都渋谷区桜丘町１８−４ 二宮ビル ４F</li>
-            <li>※勤務地は東京都（プロジェクト先による）</li>
-          </ul>
-          <div class="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8609974724945!2d139.7011518!3d35.655796200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b499198f905%3A0x88ba06dccc520ec0!2z5LqM5a6u44OT44Or!5e0!3m2!1sja!2sjp!4v1768471937385!5m2!1sja!2sjp"
-              width="600" height="300" style="border: 0" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-
-        <div class="recruit-item">
-          <h4>求める人物像</h4>
-          <ul>
-            <li>立派な志望動機は要りません。「ITに興味がある」程度でOKです！</li>
-            <li><br>＜先輩の98%が未経験スタート！＞</li>
-            <li>
-              様々な業界からIT業界に挑戦した先輩が多数。<br>
-              「みんなの居場所を創る」という当社の理念に共感してくれれば、<br>
-              「ITって何？」というレベルでも大丈夫です。<br>
-              みんな研修や実務を通して段階的にスキルアップし、<br>
-              いまは頼れる仲間として共に会社を盛り上げてくれています！
-            </li>
-          </ul>
-        </div>
-
-        <div class="recruit-item">
-          <h4>仕事内容</h4>
-          <ul>
-            <li>Webアプリケーション開発、インフラ構築、Webデザイン等</li>
-            <li>ITヘルプデスク/総合サポート</li>
-            <li>機器/端末キッティング・導入支援</li>
-            <li>PMO（プロジェクトマネジメントオフィス）支援　等</li>
-          </ul>
-        </div>
-
-        <div class="recruit-item">
-          <h4>勤務時間</h4>
-          <ul>
-            <li>10:00～19:00（実働8時間/休憩1時間）</li>
-            <li>※プロジェクト先により異なります</li>
-          </ul>
-        </div>
-
-        <div class="recruit-item">
-          <h4>休日休暇</h4>
-          <ul>
-            <li>完全週休2日制（土日祝）</li>
-            <li>※プロジェクト先により異なります</li>
-            <li>年間休日120日以上</li>
-            <li>夏季休暇、年末年始休暇、有給休暇、慶弔休暇</li>
-          </ul>
-        </div>
-
-
-
-        <div class="recruit-item">
-          <h4>福利厚生</h4>
-          <ul>
-            <li>社会保険完備</li>
-            <li>交通費全額支給</li>
-            <li>資格取得支援制度（受験料返金、資格手当）</li>
-            <li>書籍購入補助</li>
-            <li>定期健康診断</li>
-            <li>社内イベント（BBQ、スポーツ大会、社員総会など）</li>
-          </ul>
-        </div>
-        <p style="text-align: center; margin-top: 2rem; font-weight: bold; font-size: 1.6rem;">
-          上記以外も事務職、営業職、人事職なども募集中です！！</p>
-      </div>
-    </section>
-
-    <section id="ceo-message">
-      <div class="section-header">
-        <p class="section-sub">TOP MESSAGE</p>
-        <h3 class="section-title-text">代表からのメッセージ</h3>
-      </div>
-
-      <div class="ceo-img-wrapper">
-        <img src="topmesserge.svg" alt="代表メッセージ" class="img-shadow">
-      </div>
-    </section>
-
-    <section id="links">
-      <div class="section-header">
-        <p class="section-sub">LINKS</p>
-        <h3 class="section-title-text">ZOSTECについて<br>もっと知る</h3>
-      </div>
-      <div class="link-container">
-        <a href="https://www.zostec.jp/" target="_blank" rel="noopener noreferrer" class="link-btn corporate">
-          <span>本社HP</span>
-          <i class="arrow-icon">→</i>
-        </a>
-        <a href="https://www.instagram.com/zostec/" target="_blank" rel="noopener noreferrer"
-          class="link-btn instagram">
-          <span>公式Instagram</span>
-          <i class="arrow-icon">→</i>
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="https://www.goku-tech.jp/" target="_blank" rel="noopener">
+          <img src="./baudroielogoorange (1).png" alt="baudroie inc." />
         </a>
       </div>
-    </section>
-    <footer>
-      <p class="copy">©2026 ZOSTEC Inc.</p>
-    </footer>
-
-    <div class="foot-banner">
-      <div class="foot-banner-item">
-        <img src="corporate_logo.png" alt="ZOSTEC ロゴ" class="logo-img">
-      </div>
-      <a href="https://timerex.net/s/fukushima_239d_327d/157ee838" class="foot-banner-item btn"
-        target="_blank">まずは話を聞いてみる</a>
+      <nav>
+        <ul>
+          <li><a href="#about">仕事</a></li>
+          <li><a href="#value">魅力</a></li>
+          <li><a href="#voices">先輩の声</a></li>
+          <li><a class="btn-nav" href="#entry">応募する</a></li>
+        </ul>
+      </nav>
     </div>
-  </main>
+  </header>
 
-  <script src="script.js"></script>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image-wrapper">
+      <img src="./営業リファラルLP素材_web_top.png" alt="営業職リファラル採用" class="hero-image-web" />
+      <img src="./営業リファラルLP素材_mobile.png" alt="営業職リファラル採用" class="hero-image-mobile" />
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">どんな営業？</h2>
+        <p class="sec-sub">ITインフラ（ネットワーク/サーバー/クラウド）に特化した法人向けソリューション提案。</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>扱う領域</h3>
+          <p>仮想化・クラウド・セキュリティなど、社会の根幹を支えるITインフラ領域。トレンドとともに需要が伸び続ける成長市場。</p>
+        </div>
+        <div class="card">
+          <h3>顧客</h3>
+          <p>大手通信会社、SIer、エンドユーザ企業などエンタープライズ中心。（例：NTT/KDDI/ソフトバンク/金融機関/ゲーム会社 等）</p>
+        </div>
+        <div class="card">
+          <h3>ミッション</h3>
+          <p>新規/既存の開拓と関係構築、先端技術案件の獲得、エンジニアのキャリア支援まで担う“総合型”の営業。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="value" id="value">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">この仕事の『圧倒的な』魅力</h2>
+        <p class="sec-sub">若手中心×上場×エンタープライズ担当。スピード出世と市場価値アップを両立。</p>
+      </div>
+      <div class="value-grid">
+        <div class="card">
+          <h3>① 1年目から大手担当</h3>
+          <p>いきなりエンタープライズの最前線へ。裁量と期待が成長を加速。</p>
+        </div>
+        <div class="card">
+          <h3>② 経営直結の近さ</h3>
+          <p>経営層に近い距離で意思決定に関与。将来の管理職抜擢チャンス。</p>
+        </div>
+        <div class="card">
+          <h3>③ 正当に報われる評価</h3>
+          <p>昇給/特別賞与あり。成果がダイレクトに報酬へ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENV -->
+  <section class="env" id="env">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">働く環境</h2>
+        <p class="sec-sub">若手が挑戦できる制度と、無理なく成果を出せる就業環境。</p>
+      </div>
+      <div class="env-grid">
+        <div class="photo">
+          <img src="./Image_20250521_163033_390 (1).jpeg" alt="オフィス" />
+        </div>
+        <div class="grid-3" style="grid-template-columns:1fr;gap:16px">
+          <div class="card">
+            <h3>勤務地</h3>
+            <p><a href="https://maps.app.goo.gl/3Xp5v1u5iE12i6x77" target="_blank" rel="noopener">〒150-0031 東京都渋谷区桜丘町１８−４ 二宮ビル ４F</a></p>
+          </div>
+          <div class="card">
+            <h3>働き方</h3>
+            <p>9:30–18:30／完全週休2日／年休125日。有給・各種休暇も充実。</p>
+          </div>
+          <div class="card">
+            <h3>福利厚生</h3>
+            <p>社保完備、健診補助、保養施設、提携スポーツクラブ等。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICES -->
+  <section class="voices" id="voices">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">先輩の声</h2>
+        <p class="sec-sub">“未経験”からキャリアを一気に伸ばした20代たち。</p>
+      </div>
+      <div class="voice-grid">
+        <div class="voice">
+          <div class="avatar"><img src="./human_AY.png" alt="A.Y"></div>
+          <div class="name">N.A</div>
+          <div class="pos">入社2年目26歳 / 元不動産営業</div>
+          <p>IT知識ゼロで別業種から転職し、現在は大手キャリアを担当中。成長スピードが段違いでモチベーション高く走れます。</p>
+        </div>
+        <div class="voice">
+          <div class="avatar"><img src="./human_KM.png" alt="K.M"></div>
+          <div class="name">S.A</div>
+          <div class="pos">入社1年目23歳/ 新卒</div>
+          <p>研修と現場OJTが実践的で3ヶ月で一人立ち。失敗を恐れず挑戦できる環境で、日々成長を実感しています。</p>
+        </div>
+        <div class="voice">
+          <div class="avatar"><img src="./human_ST.png" alt="S.T"></div>
+          <div class="name">T.M</div>
+          <div class="pos">入社3年目27歳(マネージャー) / 元通信回線営業</div>
+          <p>経営の近くで意思決定に関われるのが魅力。入社2年半でマネジャーに昇進。若手でも手を挙げれば任せてくれる文化です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOB -->
+  <section class="job" id="job">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">募集要項</h2>
+        <p class="sec-sub">求人票の内容を要約しています。詳細は面談でお伝えします。</p>
+      </div>
+      <div class="job-grid">
+        <div class="list">
+          <h4>ポジション</h4>
+          <div class="row"><div class="key">職種</div><div class="val">営業・ソリューション提案（正社員・試用期間2ヶ月）</div></div>
+          <div class="row"><div class="key">業務</div><div class="val">新規/既存開拓、関係構築、先端技術案件（仮想化・クラウド等）の獲得、エンジニアのキャリア支援</div></div>
+          <div class="row"><div class="key">配属</div><div class="val">営業統括本部</div></div>
+          <div class="row"><div class="key">勤務地</div><div class="val"><a href="https://maps.app.goo.gl/3Xp5v1u5iE12i6x77" target="_blank" rel="noopener">〒150-0031 東京都渋谷区桜丘町１８−４ 二宮ビル ４F</a></div></div>
+        </div>
+        <div class="list">
+          <h4>待遇</h4>
+          <div class="row"><div class="key">年収/給与</div><div class="val">年収350〜1500万円（経験に応じて）</div></div>
+          <div class="row"><div class="key">時間</div><div class="val">9:30〜18:30（休憩60分）</div></div>
+          <div class="row"><div class="key">休日</div><div class="val">完全週休2日（土日）・祝日・夏季・年末年始・有給・慶弔 等（年間休日125日）</div></div>
+          <div class="row"><div class="key">評価</div><div class="val">昇給年1回、賞与年1回（2年目以降）、業績に応じ特別賞与あり</div></div>
+          <div class="row"><div class="key">福利厚生</div><div class="val">社保完備、健診/予防接種補助、保養施設、スポーツクラブ、提携保育園 等</div></div>
+        </div>
+        <div class="list">
+          <h4>応募条件</h4>
+          <div class="row"><div class="key">経験</div><div class="val">法人向け営業経験があれば歓迎（人材・広告・ITなど）。未経験も成長意欲を重視し選考。</div></div>
+          <div class="row"><div class="key">顧客例</div><div class="val">NTT、KDDI、ソフトバンク、金融機関、ゲーム会社 等の大手企業群</div></div>
+          <div class="row"><div class="key">特徴</div><div class="val">若手中心の上場企業。経営に近い立場で裁量大・早期抜擢のチャンス。</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="sec-title">よくある質問</h2>
+        <p class="sec-sub">応募前の不安を解消します。</p>
+      </div>
+      <details>
+        <summary>営業未経験でも大丈夫？</summary>
+        <p>問題ありません。基礎研修＋OJTで段階的にスキルを身につけられます。IT知識は入社後に学べます。</p>
+      </details>
+      <details>
+        <summary>ノルマは厳しい？働き方が心配。</summary>
+        <p>KPI運用はありますが、再現性ある育成スタイルです。就業時間は9:30–18:30、年休125日とワークライフバランスも確保しています。</p>
+      </details>
+      <details>
+        <summary>年収はどれくらい伸びますか？</summary>
+        <p>成果に応じて昇給で反映。早期に年収アップしている事例が多数あります。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="entry">
+    <div class="container">
+      <h2 class="sec-title" style="color:#fff">まずはカジュアル面談から</h2>
+      <p style="opacity:.9;margin-top:6px">30秒で完了<br>話を聞いてみるだけでもOK</p>
+      <a class="btn-big" href="https://timerex.net/s/fukushima_239d_327d/157ee838" target="_blank" rel="noopener">カジュアル面談</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="https://www.goku-tech.jp/" target="_blank" rel="noopener">
+        <img src="./baudroielogoorange (1).png" alt="baudroie inc." />
+      </a>
+      <div style="opacity:.7;font-size:13px">© 2025 ZOSTEC inc.</div>
+    </div>
+  </footer>
 </body>
-
 </html>
